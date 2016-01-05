@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311013A51C39788B0030A2B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311013A41C39788B0030A2B7 /* MapKit.framework */; };
 		318EDFEE1C1183D800E1DCF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EDFED1C1183D800E1DCF9 /* AppDelegate.swift */; };
 		318EDFF01C1183D800E1DCF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EDFEF1C1183D800E1DCF9 /* ViewController.swift */; };
 		318EDFF31C1183D800E1DCF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318EDFF11C1183D800E1DCF9 /* Main.storyboard */; };
@@ -14,10 +15,7 @@
 		318EDFF81C1183D800E1DCF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318EDFF61C1183D800E1DCF9 /* LaunchScreen.storyboard */; };
 		318EE0031C1183D800E1DCF9 /* Traffic_CongestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EE0021C1183D800E1DCF9 /* Traffic_CongestionTests.swift */; };
 		318EE00E1C1183D800E1DCF9 /* Traffic_CongestionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EE00D1C1183D800E1DCF9 /* Traffic_CongestionUITests.swift */; };
-		318EE01E1C118FE500E1DCF9 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EE01C1C118FE500E1DCF9 /* JSON.swift */; };
-		318EE01F1C118FE500E1DCF9 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 318EE01D1C118FE500E1DCF9 /* PublicArt.json */; };
-		318EE0211C1190E300E1DCF9 /* MacfitClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EE0201C1190E300E1DCF9 /* MacfitClub.swift */; };
-		318EE0231C11963800E1DCF9 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EE0221C11963800E1DCF9 /* VCMapView.swift */; };
+		31C7E24D1C38FB2B00218CB0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C7E24C1C38FB2B00218CB0 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,23 +36,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		311013A41C39788B0030A2B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		318EDFEA1C1183D800E1DCF9 /* Traffic Congestion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Traffic Congestion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318EDFED1C1183D800E1DCF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318EDFEF1C1183D800E1DCF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		318EDFF21C1183D800E1DCF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		318EDFF41C1183D800E1DCF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		318EDFF71C1183D800E1DCF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		318EDFF91C1183D800E1DCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318EDFFE1C1183D800E1DCF9 /* Traffic CongestionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Traffic CongestionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318EE0021C1183D800E1DCF9 /* Traffic_CongestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traffic_CongestionTests.swift; sourceTree = "<group>"; };
 		318EE0041C1183D800E1DCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318EE0091C1183D800E1DCF9 /* Traffic CongestionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Traffic CongestionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318EE00D1C1183D800E1DCF9 /* Traffic_CongestionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traffic_CongestionUITests.swift; sourceTree = "<group>"; };
 		318EE00F1C1183D800E1DCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		318EE01C1C118FE500E1DCF9 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		318EE01D1C118FE500E1DCF9 /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
-		318EE0201C1190E300E1DCF9 /* MacfitClub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacfitClub.swift; sourceTree = "<group>"; };
-		318EE0221C11963800E1DCF9 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		31C7E24C1C38FB2B00218CB0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		31C7E28D1C39700400218CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				311013A51C39788B0030A2B7 /* MapKit.framework in Frameworks */,
+				31C7E24D1C38FB2B00218CB0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +83,8 @@
 		318EDFE11C1183D800E1DCF9 = {
 			isa = PBXGroup;
 			children = (
+				311013A41C39788B0030A2B7 /* MapKit.framework */,
+				31C7E24C1C38FB2B00218CB0 /* CoreLocation.framework */,
 				318EDFEC1C1183D800E1DCF9 /* Traffic Congestion */,
 				318EE0011C1183D800E1DCF9 /* Traffic CongestionTests */,
 				318EE00C1C1183D800E1DCF9 /* Traffic CongestionUITests */,
@@ -105,15 +105,12 @@
 		318EDFEC1C1183D800E1DCF9 /* Traffic Congestion */ = {
 			isa = PBXGroup;
 			children = (
-				318EE01B1C118FCC00E1DCF9 /* resources */,
 				318EDFED1C1183D800E1DCF9 /* AppDelegate.swift */,
 				318EDFEF1C1183D800E1DCF9 /* ViewController.swift */,
+				31C7E28D1C39700400218CB0 /* Info.plist */,
 				318EDFF11C1183D800E1DCF9 /* Main.storyboard */,
 				318EDFF41C1183D800E1DCF9 /* Assets.xcassets */,
 				318EDFF61C1183D800E1DCF9 /* LaunchScreen.storyboard */,
-				318EDFF91C1183D800E1DCF9 /* Info.plist */,
-				318EE0201C1190E300E1DCF9 /* MacfitClub.swift */,
-				318EE0221C11963800E1DCF9 /* VCMapView.swift */,
 			);
 			path = "Traffic Congestion";
 			sourceTree = "<group>";
@@ -134,15 +131,6 @@
 				318EE00F1C1183D800E1DCF9 /* Info.plist */,
 			);
 			path = "Traffic CongestionUITests";
-			sourceTree = "<group>";
-		};
-		318EE01B1C118FCC00E1DCF9 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				318EE01C1C118FE500E1DCF9 /* JSON.swift */,
-				318EE01D1C118FE500E1DCF9 /* PublicArt.json */,
-			);
-			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				318EE01F1C118FE500E1DCF9 /* PublicArt.json in Resources */,
 				318EDFF81C1183D800E1DCF9 /* LaunchScreen.storyboard in Resources */,
 				318EDFF51C1183D800E1DCF9 /* Assets.xcassets in Resources */,
 				318EDFF31C1183D800E1DCF9 /* Main.storyboard in Resources */,
@@ -277,9 +264,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				318EE01E1C118FE500E1DCF9 /* JSON.swift in Sources */,
-				318EE0211C1190E300E1DCF9 /* MacfitClub.swift in Sources */,
-				318EE0231C11963800E1DCF9 /* VCMapView.swift in Sources */,
 				318EDFF01C1183D800E1DCF9 /* ViewController.swift in Sources */,
 				318EDFEE1C1183D800E1DCF9 /* AppDelegate.swift in Sources */,
 			);
@@ -422,9 +406,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Traffic Congestion/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tr.edu.boun.swe.Traffic-Congestion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -433,9 +419,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Traffic Congestion/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tr.edu.boun.swe.Traffic-Congestion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -506,6 +494,7 @@
 				318EE0141C1183D800E1DCF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		318EE0151C1183D800E1DCF9 /* Build configuration list for PBXNativeTarget "Traffic CongestionTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +503,7 @@
 				318EE0171C1183D800E1DCF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		318EE0181C1183D800E1DCF9 /* Build configuration list for PBXNativeTarget "Traffic CongestionUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +512,7 @@
 				318EE01A1C1183D800E1DCF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

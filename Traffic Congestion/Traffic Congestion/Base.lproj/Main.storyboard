@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Current Location-->
@@ -19,24 +21,65 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lg8-ou-4St">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qdj-hd-etn" id="L5Y-Qt-3f9"/>
+                                </connections>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weT-Zm-6PY">
+                                <rect key="frame" x="538" y="559" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="0.047916269482042154" blue="0.63324198298429324" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7Y-qp-TAp">
+                                <rect key="frame" x="538" y="530" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="0.047916269482042154" blue="0.63324198298429324" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="lg8-ou-4St" secondAttribute="trailing" id="CmG-fv-HX3"/>
-                            <constraint firstItem="lg8-ou-4St" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fNd-YR-up0"/>
-                            <constraint firstItem="lg8-ou-4St" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="pwf-GN-ihD"/>
-                            <constraint firstItem="lg8-ou-4St" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="y5m-d7-6Dy"/>
+                            <constraint firstItem="weT-Zm-6PY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4pV-sa-B1a"/>
+                            <constraint firstAttribute="bottom" secondItem="weT-Zm-6PY" secondAttribute="bottom" constant="20" symbolic="YES" id="A49-mz-vVH"/>
+                            <constraint firstItem="weT-Zm-6PY" firstAttribute="top" secondItem="E7Y-qp-TAp" secondAttribute="bottom" constant="8" symbolic="YES" id="GkZ-u5-ZnH"/>
+                            <constraint firstAttribute="trailing" secondItem="lg8-ou-4St" secondAttribute="trailing" id="Ohb-z4-EB5"/>
+                            <constraint firstItem="lg8-ou-4St" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wal-gl-C7c"/>
+                            <constraint firstItem="E7Y-qp-TAp" firstAttribute="trailing" secondItem="weT-Zm-6PY" secondAttribute="trailing" id="gCL-K5-4V4"/>
+                            <constraint firstItem="lg8-ou-4St" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rAu-8J-UIh"/>
+                            <constraint firstItem="lg8-ou-4St" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="whm-J6-M22"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Current Location" id="qdj-hd-etn"/>
+                    <navigationItem key="navigationItem" title="Current Location" id="qdj-hd-etn">
+                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="bCR-sb-aAg">
+                            <connections>
+                                <action selector="playBtnPressed:" destination="BYZ-38-t0r" id="3Ux-z4-QaZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="stop" id="K4I-Q4-fgc">
+                                <connections>
+                                    <action selector="stopBtnPressed:" destination="BYZ-38-t0r" id="TUV-IE-Vfy"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="X5f-2b-IY7">
+                                <connections>
+                                    <action selector="refreshBtnPressed:" destination="BYZ-38-t0r" id="29e-np-vqU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="lg8-ou-4St" id="P0G-OI-ATx"/>
+                        <outlet property="mapView" destination="lg8-ou-4St" id="Bc9-3u-nbh"/>
+                        <outlet property="speedLabel" destination="E7Y-qp-TAp" id="1gC-7y-Il9"/>
+                        <outlet property="timeLabel" destination="weT-Zm-6PY" id="mgf-m4-VTE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="358"/>
+            <point key="canvasLocation" x="1145" y="590"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CnA-jW-TDp">
