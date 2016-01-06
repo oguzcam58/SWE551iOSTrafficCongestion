@@ -73,13 +73,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let date = NSDate()
         
         let userLocation:CLLocation = locations.last!
         let latitudeByUserLocation = userLocation.coordinate.latitude
         let longitudeByUserLocation = userLocation.coordinate.longitude
         
         speedLabel.text = "Speed: " + String(userLocation.speed) + " m/s"
-        timeLabel.text = "Time: " + formatter.stringFromDate(NSDate())
+        timeLabel.text = "Time: " + formatter.stringFromDate(date)
         
         // Location Update
         let locationCore:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitudeByUserLocation , longitude: longitudeByUserLocation) //Coordinates
@@ -107,15 +108,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 if (errors != nil) {
                     print(errors)
                 } else {
-                    
-                    let overlays = self.mapView.overlays
-                    self.mapView.removeOverlays(overlays)
-                    
                     for route in response!.routes {
                         print("\(route.distance) meters")
                         self.speed = route.distance * 6 * 60 / 1000
                         
-                        self.addPinToMap(locationCore, kmPerHour: self.speed)
+                        self.addPinToMap(locationCore, kmPerHour: self.speed, date: date)
                         
                         self.mapView.addOverlay(route.polyline,
                             level: MKOverlayLevel.AboveRoads)
@@ -131,18 +128,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     // Set map on screen
     func centerMapOnLocation(location: CLLocationCoordinate2D) {
-        let theSpan = MKCoordinateSpanMake(0.05, 0.05)
+        let theSpan = MKCoordinateSpanMake(0.01, 0.01)
         let coordinateRegion = MKCoordinateRegionMake(location, theSpan)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
     
     // Add pin
-    func addPinToMap(location: CLLocationCoordinate2D, kmPerHour: Double) {
+    func addPinToMap(location: CLLocationCoordinate2D, kmPerHour: Double, date: NSDate) {
         // add pin
         let currentLoc = MKPointAnnotation()
         currentLoc.title = String(kmPerHour) + " km/h"
-        currentLoc.subtitle = formatter.stringFromDate(NSDate())
+        currentLoc.subtitle = formatter.stringFromDate(date)
         currentLoc.coordinate = location
         
         mapView.addAnnotation(currentLoc)
@@ -159,7 +156,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     // This one draws the rout on the map using map overlays
-    // you need to make sure that the deleget for the mapview in the storyboard
+    // you need to make sure that the delegate for the mapview in the storyboard
     // is set to this class
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer
     {
