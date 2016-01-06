@@ -11,11 +11,11 @@
 		318EDFEE1C1183D800E1DCF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EDFED1C1183D800E1DCF9 /* AppDelegate.swift */; };
 		318EDFF01C1183D800E1DCF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EDFEF1C1183D800E1DCF9 /* ViewController.swift */; };
 		318EDFF31C1183D800E1DCF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318EDFF11C1183D800E1DCF9 /* Main.storyboard */; };
-		318EDFF51C1183D800E1DCF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318EDFF41C1183D800E1DCF9 /* Assets.xcassets */; };
 		318EDFF81C1183D800E1DCF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318EDFF61C1183D800E1DCF9 /* LaunchScreen.storyboard */; };
 		318EE0031C1183D800E1DCF9 /* Traffic_CongestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EE0021C1183D800E1DCF9 /* Traffic_CongestionTests.swift */; };
 		318EE00E1C1183D800E1DCF9 /* Traffic_CongestionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318EE00D1C1183D800E1DCF9 /* Traffic_CongestionUITests.swift */; };
 		31C7E24D1C38FB2B00218CB0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C7E24C1C38FB2B00218CB0 /* CoreLocation.framework */; };
+		31EC6E6E1C3CD2AD0007EAD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31EC6E6D1C3CD2AD0007EAD1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		318EDFED1C1183D800E1DCF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318EDFEF1C1183D800E1DCF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		318EDFF21C1183D800E1DCF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		318EDFF41C1183D800E1DCF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		318EDFF71C1183D800E1DCF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		318EDFFE1C1183D800E1DCF9 /* Traffic CongestionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Traffic CongestionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318EE0021C1183D800E1DCF9 /* Traffic_CongestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traffic_CongestionTests.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		318EE00F1C1183D800E1DCF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31C7E24C1C38FB2B00218CB0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		31C7E28D1C39700400218CB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31EC6E6D1C3CD2AD0007EAD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +109,8 @@
 				318EDFEF1C1183D800E1DCF9 /* ViewController.swift */,
 				31C7E28D1C39700400218CB0 /* Info.plist */,
 				318EDFF11C1183D800E1DCF9 /* Main.storyboard */,
-				318EDFF41C1183D800E1DCF9 /* Assets.xcassets */,
 				318EDFF61C1183D800E1DCF9 /* LaunchScreen.storyboard */,
+				31EC6E6D1C3CD2AD0007EAD1 /* Assets.xcassets */,
 			);
 			path = "Traffic Congestion";
 			sourceTree = "<group>";
@@ -201,6 +201,7 @@
 				TargetAttributes = {
 					318EDFE91C1183D800E1DCF9 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = V68U6SL9H8;
 					};
 					318EDFFD1C1183D800E1DCF9 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -238,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				318EDFF81C1183D800E1DCF9 /* LaunchScreen.storyboard in Resources */,
-				318EDFF51C1183D800E1DCF9 /* Assets.xcassets in Resources */,
+				31EC6E6E1C3CD2AD0007EAD1 /* Assets.xcassets in Resources */,
 				318EDFF31C1183D800E1DCF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,12 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Traffic Congestion/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tr.edu.boun.swe.Traffic-Congestion";
+				PRODUCT_BUNDLE_IDENTIFIER = tr.edu.boun.swe.OguzCamTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -418,12 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Traffic Congestion/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "tr.edu.boun.swe.Traffic-Congestion";
+				PRODUCT_BUNDLE_IDENTIFIER = tr.edu.boun.swe.OguzCamTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

@@ -13,7 +13,7 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     var manager = CLLocationManager()
-    var speed = -1.0
+    var speed = 0.0
     var intervalTime = 10
     var mapCentralized = false
     let formatter = NSDateFormatter()
@@ -28,7 +28,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBAction func playBtnPressed(sender: AnyObject) {
         if timer == nil {
             lastLocation = nil
-            speed = -1.0
+            speed = 0.0
             manager.requestLocation()
             timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(intervalTime), target: self, selector: "timerDone", userInfo: nil, repeats: true)
         }
@@ -73,13 +73,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let date = NSDate()
+        let date:NSDate! = NSDate()
         
-        let userLocation:CLLocation = locations.last!
+        let userLocation:CLLocation! = locations.last!
         let latitudeByUserLocation = userLocation.coordinate.latitude
         let longitudeByUserLocation = userLocation.coordinate.longitude
+        var currentSpeed:Double! = userLocation.speed
+        if currentSpeed < 0 {
+            currentSpeed = 0.0
+        } else {
+            currentSpeed = currentSpeed * 3.6
+        }
         
-        speedLabel.text = "Speed: " + String(userLocation.speed) + " m/s"
+        speedLabel.text = "Speed: " + String(currentSpeed) + " km/h"
         timeLabel.text = "Time: " + formatter.stringFromDate(date)
         
         // Location Update
@@ -89,7 +95,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         if lastLocation == nil {
             lastLocation = userLocation
-            addPinToMap(locationCore, title: "Start point", subtitle: "")
+            if timer != nil {
+                addPinToMap(locationCore, title: "Start point", subtitle: "0 km/h")
+            }
         } else {
             let startPlacemark = MKPlacemark(coordinate: CLLocationCoordinate2DMake(
                 lastLocation.coordinate.latitude, lastLocation.coordinate.longitude
